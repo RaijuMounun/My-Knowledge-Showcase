@@ -11,10 +11,6 @@ public class Controller : MonoBehaviour
     public List<GameObject> shapePool;          // The pool of objects
     public int checkPoint;                  // The checkpoint for the pool
 
-
-    //testing
-    public bool one, ten, hundred, thousand;
-
     void Awake()
     {
 
@@ -23,31 +19,6 @@ public class Controller : MonoBehaviour
             instance = this;
         }
     }
-
-    void Update()
-    {
-        if (one)
-        {
-            OpenShape(1);
-            one = false;
-        }
-        if (ten)
-        {
-            OpenShape(10);
-            ten = false;
-        }
-        if (hundred)
-        {
-            OpenShape(100);
-            hundred = false;
-        }
-        if (thousand)
-        {
-            OpenShape(1000);
-            thousand = false;
-        }
-    }
-
 
     public void OpenShape(int openCount)
     {

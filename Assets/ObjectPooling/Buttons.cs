@@ -17,7 +17,6 @@ public class Buttons : MonoBehaviour
     {
         if (interacted == true)
         {
-            print("interacted");
             OpenShapes();
             interacted = false;
         }
@@ -25,7 +24,6 @@ public class Buttons : MonoBehaviour
 
     void OpenShapes()
     {
-        print("OpenShapes");
         controller.OpenShape(value);
     }
 
