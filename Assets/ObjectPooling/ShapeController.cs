@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class ShapeController : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    float timer;
+
+    void Update()
     {
-        if (collision.gameObject.tag == "Ground")
+        if (this.gameObject.activeInHierarchy == true)
         {
-            gameObject.SetActive(false);
+            var time = Random.Range(3, 7);
+            timer += Time.deltaTime;
+            if (timer > time)
+            {
+                timer = 0;
+                gameObject.SetActive(false);
+            }
         }
     }
 }
